@@ -1,8 +1,9 @@
 package com.ravish.hilt.coroutines.retrofit.example.data.network
 
-import com.ravish.hilt.coroutines.retrofit.example.data.model.ApiResponse
+import com.ravish.hilt.coroutines.retrofit.example.data.model.User
+import kotlinx.coroutines.flow.Flow
 
 interface ApiRepository {
 
-    suspend fun getData(id: String): ApiResponse
+    suspend fun getUser(): Flow<User>
 }

@@ -8,7 +8,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
@@ -18,6 +18,8 @@ object NetworkModule {
 
     private const val TIMEOUT = 30L
 
+    @Provides
+    @Singleton
     fun providesOkHttp(): OkHttpClient = OkHttpClient.Builder().apply {
         if (BuildConfig.DEBUG) {
             addInterceptor(HttpLoggingInterceptor().apply {
@@ -32,8 +34,8 @@ object NetworkModule {
     @Provides
     @Singleton
     fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder().apply {
-        baseUrl("http://host.com")
+        baseUrl("https://api.github.com")
         client(okHttpClient)
-        addConverterFactory(GsonConverterFactory.create())
+        addConverterFactory(MoshiConverterFactory.create())
     }.build()
 }
