@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">hilt-coroutines-retrofit-example</string>
+    <string name="error_message">Something went wrong!</string>
+    <string name="followers">Followers: %d</string>
 </resources>
