@@ -25,7 +25,9 @@ And it's capabilities for writing Unit test cases.
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/ravishrajput" target="blank"><img align="center" src="/docs/linkedin.png" alt="ravishrajput" height="30" width="31" /></a>
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
   <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="ravishrajput" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/ravishrajput?trk=profile-badge">Ravish Rajput</a></div>
+              
 </p>
 
 ### License
